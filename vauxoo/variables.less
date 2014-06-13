@@ -18,6 +18,13 @@
 @brand-info:            #5bc0de;
 @brand-warning:         #E99002;
 @brand-danger:          #F04124;
+@brand-red-vauxoo:       #F5F5F5;
+@brand-red-vauxoo-dark:  #6B091B;
+@brand-grey-vauxoo:      #DEDEDF;
+@brand-grey-vauxoo-dark: #A7A7A7;
+@brand-black-vauxoo:    #000000;
+@brand-white-vauxoo:    #FFFFFF;
+
 
 
 //== Scaffolding
@@ -230,7 +237,7 @@
 @dropdown-link-disabled-color:   @gray-light;
 
 //** Text color for headers within dropdown menus.
-@dropdown-header-color:          @gray-light;
+@dropdown-header-color:          @brand-grey-vauxoo-dark;
 
 // Note: Deprecated @dropdown-caret-color as of v3.1.0
 @dropdown-caret-color:           #000;
@@ -326,23 +333,23 @@
 //##
 
 // Basics of a navbar
-@navbar-height:                    45px;
+@navbar-height:                    70px;
 @navbar-margin-bottom:             @line-height-computed;
 @navbar-border-radius:             @border-radius-base;
 @navbar-padding-horizontal:        floor((@grid-gutter-width / 2));
 @navbar-padding-vertical:          ((@navbar-height - @line-height-computed) / 2);
 @navbar-collapse-max-height:       340px;
 
-@navbar-default-color:             #fff;
-@navbar-default-bg:                @gray-dark;
+@navbar-default-color:             #000;
+@navbar-default-bg:                #fff;
 @navbar-default-border:            darken(@navbar-default-bg, 6.5%);
 
 // Navbar links
-@navbar-default-link-color:                #fff;
-@navbar-default-link-hover-color:          #fff;
-@navbar-default-link-hover-bg:             #272727;
-@navbar-default-link-active-color:         #fff;
-@navbar-default-link-active-bg:            #272727;
+@navbar-default-link-color:                #000;
+@navbar-default-link-hover-color:          #000;
+@navbar-default-link-hover-bg:             @brand-red-vauxoo;
+@navbar-default-link-active-color:         #000;
+@navbar-default-link-active-bg:            @brand-red-vauxoo;
 @navbar-default-link-disabled-color:       #ccc;
 @navbar-default-link-disabled-bg:          transparent;
 
@@ -359,15 +366,15 @@
 
 // Inverted navbar
 // Reset inverted navbar basics
-@navbar-inverse-color:                      #fff;
-@navbar-inverse-bg:                         @brand-primary;
+@navbar-inverse-color:                      @brand-white-vauxoo;
+@navbar-inverse-bg:                         @brand-grey-vauxoo-dark;
 @navbar-inverse-border:                     darken(@navbar-inverse-bg, 10%);
 
 // Inverted navbar links
-@navbar-inverse-link-color:                 #fff;
+@navbar-inverse-link-color:                 @brand-red-vauxoo;
 @navbar-inverse-link-hover-color:           #fff;
 @navbar-inverse-link-hover-bg:              darken(@navbar-inverse-bg, 10%);
-@navbar-inverse-link-active-color:          #fff;
+@navbar-inverse-link-active-color:          @brand-black-vauxoo;
 @navbar-inverse-link-active-bg:             darken(@navbar-inverse-bg, 10%);
 @navbar-inverse-link-disabled-color:        #444;
 @navbar-inverse-link-disabled-bg:           transparent;
