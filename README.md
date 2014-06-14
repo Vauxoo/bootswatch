@@ -12,8 +12,29 @@ The themes are also hosted on [BootstrapCDN](http://www.bootstrapcdn.com/).
 Rails users should check out [twitter-bootswatch-rails](https://github.com/scottvrosenthal/twitter-bootswatch-rails).
 
 
+How to create your own theme
+----
+To modify a theme or create your own, follow the steps below in your terminal. You'll need to have Git and Node installed.
+
+`git clone https://github.com/thomaspark/bootswatch.git`
+ 
+Then `cd` to bootswatch directory and run: 
+
+`npm install`
+
+Edit `variables.less` and `bootswatch.less` in one of the theme directories, or create your own in /custom.
+If you want to create your own theme just copy a desired base theme ie. If you want to modify Yeti theme do `cp yeti your_own_theme_name`
+
+Then edit the `index.html` of the root directory and add the path of your `your_own_theme_name` tho the list.
+
+Install grunt `sudo npm install -g grunt-cli`.
+
+
 Customization
 ------
+
+After modifying the files as you want type `grunt swatch:your_own_theme_name` to build the CSS for a theme, e.g., grunt swatch:amelia for Amelia. Or type grunt swatch to build them all at once. To have grunt available in the command line, install grunt-cli as described on the Grunt Getting Started page.
+
 Bootswatch is open source and you’re welcome to modify the themes.
 
 Each theme consists of two LESS files. `variables.less`, which is included by default in Bootstrap, allows you to customize [these settings](http://getbootstrap.com/customize/#less-variables). `bootswatch.less` introduces more extensive structural changes.
@@ -51,22 +72,5 @@ Copyright 2014 Thomas Park
 
 Code released under the MIT License.
 
-How to create your own theme
-----
-To modify a theme or create your own, follow the steps below in your terminal. You'll need to have Git and Node installed.
 
-`git clone https://github.com/thomaspark/bootswatch.git`
- 
-Then `cd` to bootswatch directory and run: 
-
-`npm install`
-
-Edit `variables.less` and `bootswatch.less` in one of the theme directories, or create your own in /custom.
-If you want to create your own theme just copy a desired base theme ie. If you want to modify Yeti theme do `cp yeti your_own_theme_name`
-
-Then edit the `index.html` of the root directory and add the path of your `your_own_theme_name` tho the list.
-
-Install grunt `sudo npm install -g grunt-cli`.
-
-After modifying the files as you want type `grunt swatch:your_own_theme_name` to build the CSS for a theme, e.g., grunt swatch:amelia for Amelia. Or type grunt swatch to build them all at once. To have grunt available in the command line, install grunt-cli as described on the Grunt Getting Started page.
 
